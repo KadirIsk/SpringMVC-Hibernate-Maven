@@ -2,6 +2,7 @@ package com.sprhib.model;
 
 
 import javax.persistence.*;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "invoice")
@@ -10,20 +11,30 @@ public class Invoice {
     @Id
     private String ID;
 
+    @Column(name = "DespatchID")
     private int DespatchID;
 
+    @Column(name = "DeliveredQuantity")
     private int DeliveredQuantity;
 
+    @Column(name = "OrderLineReferanceID")
     private int OrderLineReferanceID;
 
+    @Size(min = 1, max = 250)
+    @Column(name = "ItemName")
     private String ItemName;
 
+    @Size(min = 6, max = 10)
+    @Column(name = "SellersIdentificaitonID")
     private String SellersIdentificaitonID;
 
+    @Column(name = "InvoiceQuantity")
     private int InvoiceQuantity;
 
+    @Column(name = "ExtensionAmount")
     private int ExtensionAmount;
 
+    @Column(name = "Price")
     private int Price;
 
     public Invoice(){}
