@@ -9,25 +9,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-<title>Edit team page</title>
+<title>Add team page</title>
 </head>
 <body>
-<h1>Edit team page</h1>
-<p>Here you can edit the existing team.</p>
-<p>${message}</p>
-<form:form method="POST" commandName="team" action="${pageContext.request.contextPath}/team/edit/${team.id}.html">
+<h1>Add team page</h1>
+<p>Here you can add a new team.</p>
+<form:form method="POST" commandName="invoice" action="${pageContext.request.contextPath}/invoice/add.html">
 <table>
 <tbody>
 	<tr>
 		<td>Name:</td>
-		<td><form:input path="name" /></td>
+		<td><form:input path="ItemName" /></td>
 	</tr>
 	<tr>
 		<td>Rating:</td>
-		<td><form:input path="rating" /></td>
+		<td><form:input path="IdentificationID" /></td>
 	</tr>
 	<tr>
-		<td><input type="submit" value="Edit" /></td>
+		<td><input type="submit" value="Add" /></td>
 		<td></td>
 	</tr>
 </tbody>
